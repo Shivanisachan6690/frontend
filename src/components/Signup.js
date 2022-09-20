@@ -1,7 +1,13 @@
+import { Formik } from 'formik'
 import React from 'react'
 
 const Signup = () => {
   
+
+  const userSubmit = (formdata) => { 
+    console.log(formdata);
+   }
+
   return (
     <div>
         <>
@@ -29,7 +35,7 @@ const Signup = () => {
         <div className="row d-flex justify-content-center">
           <div className="col-lg-8">
             <h2 className="fw-bold mb-5">Sign up now</h2>
-            <Formik 
+            <Formik
                     initialValues={{name : '', email : '', password : '', age : ''}}
                     onSubmit={userSubmit}>
                         {({values, handleSubmit, handleChange}) => (
